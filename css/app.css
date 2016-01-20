@@ -225,8 +225,8 @@ a {
 
   flex-grow: 1;
   flex-basis: 0;
-  /*height: 100%;*/
-  /*overflow: scroll;*/
+  height: 100%;
+  overflow: scroll;
 }
 
 .cart__title {
@@ -316,6 +316,8 @@ a {
 .adjust-qty--gray .adjust-qty__button {
   background: #D8D8D8;
   color: #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .checkout {
