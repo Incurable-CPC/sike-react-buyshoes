@@ -5,12 +5,12 @@ css:
 
 .PHONY: server
 server:
-	browser-sync start --server --files='index.html,bundle/app.css,js/app.js,build/app.js'
+	browser-sync start --server --files='index.html,bundle/app.css,bundle/app.js'
 
 .PHONY: js
 js:
 	mkdir -p build
-	babel --watch js/app.jsx --out-file build/app.js
+	webpack --watch --progress -p js/app.jsx bundle/app.js --module-bind "jsx=babel" --module-bind "js=babel"
 
 .PHONY: all
 all:
